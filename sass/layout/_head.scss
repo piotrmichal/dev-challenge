@@ -1,0 +1,88 @@
+header {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, .7),
+			rgba(0, 0, 0, .7)
+			),
+		url('../img/home-bg.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 120vh;
+		color: $light;
+
+		.placeholder {
+			height: 68px;
+		}
+
+	nav {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		transition: background-color 300ms ease-in;
+		z-index: 20;
+		height: 68px;
+	}
+
+	#logo {
+		padding-top: 30px;
+		padding-left: 12.5%;
+	}
+
+	.menu-icon {
+		display: none;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	ul {
+		display: flex;
+		padding-right: 12.5%;
+
+		li {
+			text-transform: uppercase;
+			font-size: $fontSize * 0.9;
+			padding-top: 40px;
+			margin-left: 20px;
+			border-top: 4px solid transparent;
+			transition: border-color 200ms ease-in;
+
+			&:hover {
+				border-color: $blue;
+			}
+		}
+	}
+
+	.banner {
+			width: 40%;
+			margin-left: 12.5%;
+
+		h2 {
+			margin-top: 157px;
+		}
+
+		h1 span {
+				color: $blue;
+			}
+
+		h3 {
+			font-weight: 400;
+			white-space: pre;
+			font-size: $fontSize * 1.8;
+		}
+
+		p {
+			margin: 50px 10px;
+		}
+
+		button {
+			background-color: $lightBlue;
+			margin: 30px 10px;
+
+			&:hover {
+				background-color: darken($lightBlue, 8%);
+			}
+		}
+	}
+}

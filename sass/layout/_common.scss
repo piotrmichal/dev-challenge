@@ -1,0 +1,305 @@
+body {
+	background-color: $light;
+	font-family: $font;
+	transition: all 500ms ease-in;
+}
+
+h1 {
+	font-weight: $fontWeight;
+	font-size: $fontSize * 2.5;
+	margin-bottom: 8px;
+}
+
+h2 {
+	font-size: $fontSize * 2;
+	font-family: $kittyFont;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-weight: $fontWeight;
+	font-size: $fontSize * 2;
+}
+
+h4 {
+	font-weight: 700;
+	font-size: $fontSize * 1;
+	text-transform: uppercase;
+}
+
+p {
+	line-height: $lineHeight;
+	font-size: $fontSize;
+}
+
+button {
+	border-radius: $btnRadius;
+	padding: 8px 25px;
+	color: $btnTxtColor;
+}
+
+.wrapper{
+    width: 75%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-heading {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.active {
+	border-top: 4px solid $blue;
+	cursor: pointer;
+}
+
+.stickyStyle {
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.overlay {
+	position: absolute;
+	background-color: rgba(0, 124, 243, .7);
+	top: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: all 300ms;
+}
+
+.overlay a {
+	position: relative;
+	top: 38%;
+	color: #FFF;
+	font-size: 50px;
+}
+
+.overlay:hover {
+	opacity: 1;
+}
+
+@media screen and (max-width: 980px) {
+	header {
+		nav.content {
+				display: block;
+				width: 100%;
+
+				.menu-icon {
+					display: block;
+					float: right;
+					margin-right: 10px;
+					position: relative;
+					top: -35px;
+				}
+
+			ul {
+				width: 100%;
+				position: absolute;
+				display: block;
+				text-align: right;
+				background-color: rgba(0, 0, 0, .8);
+				overflow: hidden;
+				height: 0;
+				transition: height 200ms ease-in;
+
+				li {
+					margin: 0 40px;
+					padding: 5px 0 20px;
+				}
+			}
+
+			ul.open {
+				height: 280px;
+			}
+		}
+
+		div.banner {
+			width: 60%;
+		
+			h2 {
+				margin-top: 70px;
+			}
+		}
+	}
+
+	#services div.content {
+		flex-direction: column;
+
+		img {
+			width: 40px;
+		}
+
+		div.servicesStyle {
+			margin-left: 8%;
+		}
+	}
+
+	#client div.section-heading {
+		width: 70%;
+	}
+
+	#blog {
+			div.content {
+				flex-direction: column;
+				width: 100%;
+		
+				div.blog-heading {
+					width: 100%;
+					margin-right: 0;
+				}
+
+				article.blog-post2 {
+					width: 100%;
+					margin-top: 25px;
+					box-sizing: border-box;
+				}
+			}
+
+		.box2 { 
+			div.blog-cards {
+				width: 100%;
+			}
+
+			article.blog-post3 {
+				width: 100%;
+				margin: 25px 0 0 0;
+				box-sizing: border-box;
+			}
+		}
+	}
+
+	footer #contact {
+		flex-direction: column;
+		width: 40%;
+		margin: 0 20%;
+
+		div.section-heading {
+			padding-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 660px) {
+	header {
+		div.banner {
+			h2 {
+				margin-top: 50px;
+			}
+
+			h1 {
+				font-size: $fontSize * 1.8;
+			}
+
+			h3 {
+				font-size: $fontSize * 1.3;
+			}
+		}
+	}
+
+	#about div.content {
+		display: block;
+
+		div {
+			width: 80%;
+		}
+	}
+
+	#pages article {
+		flex-direction: column;
+
+		div.projects {
+			width: 100%;
+		}
+
+		div.works {
+			width: 100%;
+		}
+	}
+
+	#client div.clients-logo {
+		flex-wrap: wrap;
+		margin: 0 auto;
+		width: 90%;
+		justify-content: space-around;
+
+		img {
+			margin: 20px;
+			width: 30%;
+		}
+	}
+
+	footer {
+
+		h3 {
+			font-size: $fontSize * 1.7;
+		}
+
+		#contact div.contact-form fieldset {
+			input,
+			textarea {
+				width: 200px;
+			}
+		}
+
+		div.socials {
+			width: 70%;
+			margin: 10% 15%;
+
+			img {
+				margin: 10px 15px;
+				width: 45px;
+				height: 45px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	header div.banner {
+		width: 80%;
+		margin-left: 5%;
+	}
+
+	#blog .box2 .blog-cards {
+		flex-direction: column;
+
+		article.blog-card {
+			width: 100%;
+			box-sizing: border-box;
+		}
+		
+		article.two {
+			margin: 25px 0 0 0;
+		}
+	}
+
+	footer {
+		#contact {
+			width: 65%;
+			margin: 5%;
+		} 
+
+		.contact-info div.beside {
+			padding: 0;
+		}
+
+		div.socials {
+			width: 70%;
+			margin: 10% 15%;
+
+			img {
+				margin: 10px;
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}

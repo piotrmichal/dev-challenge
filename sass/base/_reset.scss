@@ -1,0 +1,29 @@
+html,
+body,
+ul,
+ol,
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4 {
+	margin-top: 0;
+}
+
+button,
+fieldset,
+textarea,
+form [type="text"],
+form [type="email"] {
+	border: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
