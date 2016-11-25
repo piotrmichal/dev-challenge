@@ -93,10 +93,8 @@ button {
 
 @media screen and (max-width: 980px) {
 	header {
-			
 		nav.content {
 			display: block;
-			width: 100%;
 
 			.menu-icon {
 				display: block;
@@ -109,6 +107,7 @@ button {
 			ul {
 				width: 100%;
 				position: absolute;
+				top: 68px;
 				left: 0;
 				display: block;
 				text-align: right;

@@ -99,38 +99,36 @@ button {
   opacity: 1; }
 
 @media screen and (max-width: 980px) {
-  header#home {
-    height: 100vh; }
-    header#home nav.content {
+  header nav.content {
+    display: block; }
+    header nav.content .menu-icon {
       display: block;
-      width: 100%; }
-      header#home nav.content .menu-icon {
-        display: block;
-        float: right;
-        position: relative;
-        right: -10%;
-        top: -35px; }
-      header#home nav.content ul {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        display: block;
-        text-align: right;
-        background-color: rgba(0, 0, 0, 0.8);
-        overflow: hidden;
-        height: 0;
-        transition: height 200ms ease-in; }
-        header#home nav.content ul li {
-          margin: 0 40px;
-          padding: 5px 0 20px; }
-      header#home nav.content ul.open {
-        height: 280px; }
-    header#home div.banner h2 {
-      margin-top: 70px; }
-    header#home div.banner p {
-      width: 100%; }
-    header#home button {
-      margin: 30px 0; }
+      float: right;
+      position: relative;
+      right: -10%;
+      top: -35px; }
+    header nav.content ul {
+      width: 100%;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      display: block;
+      text-align: right;
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      height: 0;
+      transition: height 200ms ease-in; }
+      header nav.content ul li {
+        margin: 0 40px;
+        padding: 5px 0 20px; }
+    header nav.content ul.open {
+      height: 280px; }
+  header div.banner h2 {
+    margin-top: 70px; }
+  header div.banner p {
+    width: 100%; }
+  header button {
+    margin: 30px 0; }
 
   #services div.content {
     flex-direction: column; }
