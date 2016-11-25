@@ -26,6 +26,12 @@
 					margin-top: 50px;
 					background-color: $blue;
 					color: $light;
+					transition: opacity 500ms;
+
+					&:hover {
+						cursor: pointer;
+						opacity: 0.8;
+					}
 				}
 			}
 			
@@ -37,14 +43,21 @@
 					rgba(0, 0, 0, .7)
 					),
 				url('../img/blog-img.jpg');
-				background-size: cover;
+				background-size: 100% 100%;
 				background-position: center;
 				color: $light;
 				margin-left: 25px;
 				box-sizing: border-box;
+				transition: background-size 1s;
 
 				h3 {
 					padding-top: 130px;
+				}
+
+				&:hover {
+					cursor: pointer;
+					opacity: 0.8;
+					background-size: 120% 120%;
 				}
 			}
 		}
@@ -58,6 +71,7 @@
 
 			.blog-card {
 				width: 48%;
+				transition: all 500ms;
 			}
 
 			.blog-card p {
@@ -66,12 +80,22 @@
 
 			.one {
 				background-color: #EEE;
+
+				&:hover {
+					cursor: pointer;
+					background-color: #CCC;
+				}
 			}
 
 			.two {
 				background-color: #000;
 				color: $light;
 				margin-left: 25px;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 0.9;
+				}
 			}
 		}
 
@@ -81,6 +105,12 @@
 			color: $light;
 			margin-left: 25px;
 			box-sizing: border-box;
+			transition: opacity 500ms;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 0.8;
+				}
 
 			p {
 				margin: 0;

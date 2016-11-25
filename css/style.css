@@ -99,33 +99,38 @@ button {
   opacity: 1; }
 
 @media screen and (max-width: 980px) {
-  header nav.content {
-    display: block;
-    width: 100%; }
-    header nav.content .menu-icon {
+  header#home {
+    height: 100vh; }
+    header#home nav.content {
       display: block;
-      float: right;
-      margin-right: 10px;
-      position: relative;
-      top: -35px; }
-    header nav.content ul {
-      width: 100%;
-      position: absolute;
-      display: block;
-      text-align: right;
-      background-color: rgba(0, 0, 0, 0.8);
-      overflow: hidden;
-      height: 0;
-      transition: height 200ms ease-in; }
-      header nav.content ul li {
-        margin: 0 40px;
-        padding: 5px 0 20px; }
-    header nav.content ul.open {
-      height: 280px; }
-  header div.banner {
-    width: 60%; }
-    header div.banner h2 {
+      width: 100%; }
+      header#home nav.content .menu-icon {
+        display: block;
+        float: right;
+        position: relative;
+        right: -10%;
+        top: -35px; }
+      header#home nav.content ul {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        display: block;
+        text-align: right;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        height: 0;
+        transition: height 200ms ease-in; }
+        header#home nav.content ul li {
+          margin: 0 40px;
+          padding: 5px 0 20px; }
+      header#home nav.content ul.open {
+        height: 280px; }
+    header#home div.banner h2 {
       margin-top: 70px; }
+    header#home div.banner p {
+      width: 100%; }
+    header#home button {
+      margin: 30px 0; }
 
   #services div.content {
     flex-direction: column; }
@@ -137,29 +142,37 @@ button {
   #client div.section-heading {
     width: 70%; }
 
-  #blog div.content {
+  #blog div.box1 {
     flex-direction: column;
     width: 100%; }
-    #blog div.content div.blog-heading {
+    #blog div.box1 div.blog-heading {
       width: 100%;
       margin-right: 0; }
-    #blog div.content article.blog-post2 {
+    #blog div.box1 article.blog-post2 {
       width: 100%;
       margin-top: 25px;
+      margin-left: 0;
       box-sizing: border-box; }
-  #blog .box2 div.blog-cards {
-    width: 100%; }
-  #blog .box2 article.blog-post3 {
-    width: 100%;
-    margin: 25px 0 0 0;
-    box-sizing: border-box; }
+  #blog .box2 {
+    display: block; }
+    #blog .box2 div.blog-cards {
+      display: flex;
+      width: 100%; }
+    #blog .box2 article.blog-post3 {
+      width: 100%;
+      margin: 25px 0 0 0;
+      box-sizing: border-box; }
 
   footer #contact {
     flex-direction: column;
-    width: 40%;
-    margin: 0 20%; }
+    width: 80%;
+    margin: 0 10% 0 20%; }
     footer #contact div.section-heading {
-      padding-bottom: 0; } }
+      padding-bottom: 0; }
+    footer #contact div.contact-info {
+      width: 100%; }
+    footer #contact div.contact-form {
+      width: 40%; } }
 @media screen and (max-width: 660px) {
   header div.banner h2 {
     margin-top: 50px; }
@@ -191,9 +204,11 @@ button {
 
   footer h3 {
     font-size: 25.5px; }
-  footer #contact div.contact-form fieldset input,
-  footer #contact div.contact-form fieldset textarea {
-    width: 200px; }
+  footer #contact div.contact-form {
+    width: 60%; }
+    footer #contact div.contact-form fieldset input,
+    footer #contact div.contact-form fieldset textarea {
+      width: 200px; }
   footer div.socials {
     width: 70%;
     margin: 10% 15%; }
@@ -215,17 +230,18 @@ button {
       margin: 25px 0 0 0; }
 
   footer #contact {
-    width: 65%;
     margin: 5%; }
-  footer .contact-info div.beside {
-    padding: 0; }
-  footer div.socials {
-    width: 70%;
-    margin: 10% 15%; }
-    footer div.socials img {
-      margin: 10px;
-      width: 40px;
-      height: 40px; } }
+    footer #contact .contact-info div.beside {
+      padding: 0; }
+    footer #contact div.contact-form {
+      width: 80%; }
+    footer #contact div.socials {
+      width: 70%;
+      margin: 10% 15%; }
+      footer #contact div.socials img {
+        margin: 10px;
+        width: 40px;
+        height: 40px; } }
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/home-bg.jpg");
   background-size: cover;
@@ -270,7 +286,8 @@ header {
     white-space: pre;
     font-size: 27px; }
   header .banner p {
-    margin: 4% 50% 5% 1%; }
+    width: 500px;
+    margin: 5% 0% 4% 1%; }
   header .banner button {
     background-color: #0081FF;
     margin: 30px 10px; }
@@ -386,38 +403,58 @@ header {
       #blog .box1 .blog-heading .blog-post1 {
         margin-top: 50px;
         background-color: #007AF3;
-        color: #FFFFFF; }
+        color: #FFFFFF;
+        transition: opacity 500ms; }
+        #blog .box1 .blog-heading .blog-post1:hover {
+          cursor: pointer;
+          opacity: 0.8; }
     #blog .box1 .blog-post2 {
       width: 50%;
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/blog-img.jpg");
-      background-size: cover;
+      background-size: 100% 100%;
       background-position: center;
       color: #FFFFFF;
       margin-left: 25px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      transition: background-size 1s; }
       #blog .box1 .blog-post2 h3 {
         padding-top: 130px; }
+      #blog .box1 .blog-post2:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        background-size: 120% 120%; }
   #blog .box2 {
     margin: 25px 0; }
     #blog .box2 .blog-cards {
       display: flex;
       width: 50%; }
       #blog .box2 .blog-cards .blog-card {
-        width: 48%; }
+        width: 48%;
+        transition: all 500ms; }
       #blog .box2 .blog-cards .blog-card p {
         margin: 5px 10px 30px; }
       #blog .box2 .blog-cards .one {
         background-color: #EEE; }
+        #blog .box2 .blog-cards .one:hover {
+          cursor: pointer;
+          background-color: #CCC; }
       #blog .box2 .blog-cards .two {
         background-color: #000;
         color: #FFFFFF;
         margin-left: 25px; }
+        #blog .box2 .blog-cards .two:hover {
+          cursor: pointer;
+          opacity: 0.9; }
     #blog .box2 .blog-post3 {
       width: 50%;
       background-color: #FA216A;
       color: #FFFFFF;
       margin-left: 25px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      transition: opacity 500ms; }
+      #blog .box2 .blog-post3:hover {
+        cursor: pointer;
+        opacity: 0.8; }
       #blog .box2 .blog-post3 p {
         margin: 0; }
       #blog .box2 .blog-post3 h3 {
