@@ -7,8 +7,9 @@ header {
 		url('../img/home-bg.jpg');
 		background-size: cover;
 		background-position: center;
-		height: 120vh;
 		color: $light;
+		height: 130vh;
+		max-height: 800px;
 
 		.placeholder {
 			height: 68px;
@@ -21,11 +22,12 @@ header {
 		transition: background-color 300ms ease-in;
 		z-index: 20;
 		height: 68px;
+		padding: 0 12.5%;
+		box-sizing: border-box;
 	}
 
 	#logo {
 		padding-top: 30px;
-		padding-left: 12.5%;
 	}
 
 	.menu-icon {
@@ -38,7 +40,6 @@ header {
 
 	ul {
 		display: flex;
-		padding-right: 12.5%;
 
 		li {
 			text-transform: uppercase;
@@ -55,8 +56,6 @@ header {
 	}
 
 	.banner {
-			width: 40%;
-			margin-left: 12.5%;
 
 		h2 {
 			margin-top: 157px;
@@ -73,7 +72,7 @@ header {
 		}
 
 		p {
-			margin: 50px 10px;
+			margin: 4% 50% 5% 1%;
 		}
 
 		button {

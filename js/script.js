@@ -18,6 +18,15 @@ $(function() {
 	var $listItems = $('li');
 	var $link = $('li a');
 	var navHeight = $nav.outerHeight();
+	var $logo = $('#logo a');
+
+	$logo.on('click', function(e) {
+		e.preventDefault();
+		var target = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(target).offset().top
+		}, 500, 'swing');
+	});
 
 	$link.on('click', function(e) {
 		e.preventDefault();

@@ -37,6 +37,10 @@ button {
 	border-radius: $btnRadius;
 	padding: 8px 25px;
 	color: $btnTxtColor;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .wrapper{
@@ -84,6 +88,7 @@ button {
 
 .overlay:hover {
 	opacity: 1;
+	
 }
 
 @media screen and (max-width: 980px) {
