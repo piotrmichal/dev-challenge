@@ -17,23 +17,20 @@ $(function() {
 	var $nav = $('nav');
 	var $listItems = $('li');
 	var $link = $('li a');
-	var navHeight = $nav.outerHeight();
 	var $logo = $('#logo a');
+	var navHeight = $nav.outerHeight();
 
-	$logo.on('click', function(e) {
+	function smoothScroll(e) {
 		e.preventDefault();
-		var target = $(this).attr('href');
+		var elem = $(this).attr('href');
 		$('html, body').animate({
-			scrollTop: $(target).offset().top
+			scrollTop: $(elem).offset().top
 		}, 500, 'swing');
-	});
+	}
 
-	$link.on('click', function(e) {
-		e.preventDefault();
-		var target = $(this).attr('href');
-		$('html, body').animate({
-			scrollTop: $(target).offset().top
-		}, 500, 'swing');
+	$($logo).add($link).on('click', smoothScroll);
+
+	$link.on('click', function() {
 		$listItems.removeClass('active');
 		$(this).parent().addClass('active');
 	});
