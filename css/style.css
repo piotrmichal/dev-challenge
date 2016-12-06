@@ -473,7 +473,7 @@ footer {
     footer #contact .section-heading {
       text-align: left; }
     footer #contact .contact-info {
-      padding-right: 20%;
+      margin-right: 20%;
       width: 30%; }
       footer #contact .contact-info .beside {
         display: flex;
